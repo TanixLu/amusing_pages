@@ -1,4 +1,4 @@
-# fun_page
+# amusing_pages
 
 ## 开发笔记
 
@@ -13,7 +13,7 @@ projects的gh-pages不是在`/`下部署的，而是在`/project_name/`下部署
 build时加入--public-url参数，并且加入404.html、.nojekyll，这是为了在gh-pages创建SPA应用：
 
 ```bash
-trunk build --release --public-url="/fun_page/" ; cp 404.html dist/404.html ; echo $null >> dist/.nojekyll
+trunk build --release --public-url="/amusing_pages/" ; cp 404.html dist/404.html ; echo $null >> dist/.nojekyll
 ```
 
 感谢[spa-github-pages](https://github.com/rafgraph/spa-github-pages)提出的gh-pages SPA解决方法❤
