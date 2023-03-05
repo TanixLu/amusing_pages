@@ -49,3 +49,36 @@ git branch -D temp
 git reset HEAD~1
 git rm -r --cached dist
 ```
+
+### 将dist提交到gh-pages分支
+
+首先需要建立孤立的gh-pages分支：
+
+```bash
+git checkout --orphan gh-pages
+git reset --hard
+git commit --allow-empty -m "init"
+git push origin gh-pages
+git checkout main
+```
+
+在main分支内需要将dist commit上，然后执行：
+
+```bash
+git subtree push --prefix dist origin gh-pages
+```
+
+如果报错，可尝试用一个temp分支解决：
+
+```bash
+git subtree split --prefix dist -b temp
+git push -f origin temp:gh-pages
+git brandh -D temp
+```
+
+最后回退main分支到未提交dist状态：
+
+```bash
+git reset HEAD~1
+git rm -r --cached dist
+```
