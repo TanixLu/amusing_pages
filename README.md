@@ -16,6 +16,8 @@ build时加入--public-url参数，并且加入404.html、.nojekyll，这是为�
 trunk build --release --public-url="/fun_page/" ; cp 404.html dist/404.html ; echo $null >> dist/.nojekyll
 ```
 
+感谢[spa-github-pages](https://github.com/rafgraph/spa-github-pages)提出的gh-pages SPA解决方法❤
+
 ### 将dist提交到gh-pages分支
 
 首先需要建立孤立的gh-pages分支：
