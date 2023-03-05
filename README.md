@@ -23,7 +23,7 @@ trunk build --release --public-url="/fun_page/"
 ```bash
 git checkout --orphan gh-pages
 git reset --hard
-git commit -allow-empty -m "init"
+git commit --allow-empty -m "init"
 git push origin gh-pages
 git checkout main
 ```
