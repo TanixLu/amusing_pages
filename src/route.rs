@@ -18,7 +18,7 @@ pub enum Route {
 pub fn Home() -> Html {
     html! {
         <ul class="item-list">
-            <li><a href="random_walk">{"Random Walk test"}</a></li>
+            <li><a href="random_walk">{"Random Walk"}</a></li>
         </ul>
     }
 }
